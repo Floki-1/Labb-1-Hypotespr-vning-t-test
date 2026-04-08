@@ -1,0 +1,693 @@
+Data Science & Machine Learning: 7,5 hp 
+
+Labb #1 – Statistical Inference and Data Analytics 
+
+Datum: 8 april 2026 
+ 
+
+Del I 
+
+Formalia 
+
+1 Förutsättningar 
+
+Laborationen förutsätter grundläggande kunskaper i Python, enkel filhantering. Labben är en  introduktion till beskrivande statistik och hypotesprövning. 
+
+2 Mål/syfte 
+
+Laborationen är i första hand lärande snarare än prövande. Målet är att du ska: 
+
+introduceras till statistisk analys i Python 3 och använda Python som stöd för statistiska beräkningar, 
+
+utveckla färdigheter i att utföra hypotesprövning med olika typer av t-test, 
+
+träna på att tolka resultat, visualisera data och motivera statistiska slutsatser. 
+
+3 Hjälpmedel 
+
+Alla hjälpmedel är tillåtna. Var dock mycket noggrann med att undvika plagiering. Plagiering innebär att lämna in någon annans arbete som sitt eget. Detta gäller både material från människor och från AI-baserade verktyg. 
+
+Du får gärna använda externa källor, men du måste alltid: 
+
+förstå det du lämnar in, 
+
+kunna förklara och försvara din lösning muntligt, 
+
+skriva med egna ord, 
+
+tydligt ange om du har arbetat tillsammans med andra. 
+
+3.1 Verktyg 
+
+Jupyter Notebook i Anaconda används i denna laboration. Du får även använda andra vanliga Python-miljöer om de fungerar väl för uppgifterna, men lösningen ska lämnas in i ett Jupyter Notebook-format (.ipynb). 
+
+4 Deadline 
+
+Se laborationsmappens öppettider och sista inlämningsdatum i Canvas. 
+
+5 Arbetsformer 
+
+Uppgifterna löses i första hand i grupp om tre - fyra personer 
+
+6 Redovisning 
+
+Se upp för plagiat 
+
+Plagiering är att lämna in någon annans arbete som sitt eget. Det kan även ske oavsiktligt.  
+
+Genom att lämna in laborationen intygar du att du har läst, förstått och följt kursens instruktioner om plagiering. 
+
+Detta ska göras 
+
+Alla gruppmedlemmar måste vara synliga med korrekt namn under hela redovisningen, inte bara den egna delredovisningen.  
+
+Lös alla uppgifter. 
+
+Redovisa muntligt med skärminspelning, högst 5 minuter per uppgift. 
+
+Visa och förklara hur du har löst uppgifterna medan du demonstrerar din kod. 
+
+Tala på svenska. 
+
+Avsluta videon med en kort egen reflektion om laborationen. 
+
+Vem redovisar vilken uppgift? 
+
+Lös alla uppgifter, men endast redovisa en av dessa uppgift i sin videoredovisning. 
+Vilken uppgift ni redovisar ska slumpas fram på följande sätt: 
+
+ 
+
+import numpy as np 
+
+# Sätt ert gruppnummer här (t.ex. 1, 2, 3, ...). 
+
+gruppnummer = GRUPPNUMMER_HERE 
+
+ 
+
+rng = np.random.default_rng(gruppnummer) 
+
+ 
+
+# Lista över uppgifter som kan redovisas 
+
+uppgifter = [9, 10, 11] 
+
+ 
+
+# Slumpa en uppgift utan återläggning 
+
+vald_uppgift = rng.choice(uppgifter) 
+
+ 
+
+print(f"Grupp {gruppnummer} ska redovisa uppgift {vald_uppgift}.") 
+
+ 
+
+Alla i gruppen ska ändå ha arbetat med, och kunna svara på frågor om, samtliga uppgifter 9–11. 
+Redovisningen (video) ska fokusera på den uppgift som slumpats fram och ALLA i Gruppen måste vara med i bild och med korrekt namn 
+
+Teknisk redovisning 
+
+Du väljer själv verktyg för skärminspelning, till exempel OBS Studio eller motsvarande. Du kan lämna in en videofil eller en länk till videon. Om du publicerar videon externt, till exempel på YouTube, får du gärna ta bort den efter rättning. 
+
+I Canvas ska du lämna in 
+
+videofil eller länk till videon, 
+
+Jupyter Notebook-filen (.ipynb) som du demonstrerar, 
+
+en kort text om vilka du har arbetat med. 
+
+7 Betygsgränser 
+
+Betyg G 
+
+För betyget G ska alla uppgifter och deluppgifter vara fullständigt lösta. Dokumentation, kod, motiveringar och tolkningar ska finnas med. 
+
+Betyg U 
+
+Betyget U ges om kriterierna för G inte är uppfyllda. 
+
+Inga delpoäng ges. Bedömningen är helhetsbaserad utifrån om laborationen är komplett genomförd eller inte. 
+
+ 
+
+Del II 
+
+Uppgifter 
+
+8 Uppvärmning i Python 
+
+Syftet med denna uppgift är att du ska repetera grundläggande Python, datastrukturer, funktioner, visualisering och beskrivande statistik. 
+
+ 
+
+Uppgift 
+
+Använd följande värden: 
+
+63, 71, 41, 92, 11, 85, 79, 21, 54, 7, 1, 34 
+
+Lägg in värdena i en lämplig datastruktur i Python. 
+
+Skapa en Python-funktion med namnet mySummary(data). 
+
+Funktionen ska beräkna, presentera och returnera följande: 
+
+antal observationer, 
+
+median, 
+
+medelvärde, 
+
+största värde, 
+
+minsta värde, 
+
+standardavvikelse, 
+
+interkvartilavstånd, 
+
+sortering i stigande ordning, 
+
+sortering i fallande ordning. 
+
+Rita även ut följande figurer för datamängden: 
+
+histogram, 
+
+stapeldiagram. 
+
+Skriv kortfattat i egna ord: 
+
+vad varje mått beskriver, 
+
+vad som verkar känneteckna just denna datamängd, 
+
+om du ser någon möjlig avvikande observation. 
+
+ 
+
+Krav på lösning 
+
+Din lösning ska: 
+
+använda minst en egen funktion, 
+
+skriva ut resultaten på ett tydligt och läsbart sätt, 
+
+innehålla rubriker eller kommentarer så att en läsare enkelt kan följa lösningen, 
+
+använda lämpliga bibliotek, till exempel statistics, numpy, pandas eller matplotlib. 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+9 One-sample t-test 
+
+Typ av test: One-sample t-test 
+Statistisk idé: Jämför medelvärdet i ett stickprov med ett känt eller antaget populationsmedelvärde. 
+
+Scenario 
+
+Ett logistikföretag följer upp leveranstiden för ett nytt automatiserat sorteringsflöde i ett distributionscenter. Företaget har sedan tidigare ett etablerat riktvärde: den genomsnittliga leveranstiden från sortering till lastning brukar vara <se kod>. 
+
+Nu vill företaget undersöka om den nya processen verkar ha förändrat den genomsnittliga leveranstiden. 
+
+Unikt dataset för varje grupp 
+
+Varje grupp ska skapa sitt eget unika dataset med hjälp av gruppnumret i Canvas. Använd denna kod: 
+
+import numpy as np 
+
+# Sätt ert gruppnummer här (t.ex. 1, 2, 3, ...). 
+
+gruppnummer = GRUPPNUMMER_HERE 
+
+ 
+
+rng = np.random.default_rng(gruppnummer) 
+
+ 
+
+#    Variation: upp till ± 3 minuter runt 42 beroende på gruppnummer 
+
+loc_bas = 42.0 
+
+loc = loc_bas + (gruppnummer % 7 - 3) * 0.5 
+
+ 
+
+scale_bas = 4.5 
+
+scale = scale_bas + (gruppnummer % 5 - 2) * 0.3 
+
+ 
+
+# Säkerställ att scale aldrig blir för liten 
+
+scale = max(scale, 1.0) 
+
+ 
+
+print(f"Grupp {gruppnummer}: loc = {loc:.2f}, scale = {scale:.2f}") 
+
+ 
+
+# Generera leveranstider (minuter) från N(loc, scale) 
+
+leveranstider = rng.normal(loc=loc, scale=scale, size=30) 
+
+ 
+
+leveranstider = np.round(leveranstider, 1) 
+
+ 
+
+# Klipp bort eventuella negativa eller orimligt små tider 
+
+leveranstider = np.clip(leveranstider, a_min=1.0, a_max=None) 
+
+print(leveranstider) 
+
+Uppgifter 
+
+Använd scipy.stats.ttest_1samp() 
+
+Formulera nollhypotesen H0 och mothypotesen Ha. 
+
+Generera gruppens dataset enligt instruktionen ovan. 
+
+Beskriv datatypen för din variabel. 
+
+Utforska data med sammanfattande statistik och minst två lämpliga diagram. 
+
+Beräkna stickprovets standardavvikelse, medelvärde och median. 
+
+Genomför ett one-sample t-test mot populationsmedelvärdet 
+μ=42
+𝜇
+=
+42
+ 
+ vid signifikansnivån 5 procent. 
+
+Som kommentar till inlämningen redovisa p-värde och konfidensintervall på detta sätt: 
+
+p-värde (tvåsidigt):0.61814 
+
+95% CI för medel:   [40.868, 43.872] 
+
+ 
+
+Tolka resultatet med ord. 
+
+Motivera om H0 ska förkastas eller inte. 
+
+Resonera kort om statistisk signifikans jämfört med praktisk betydelse i detta sammanhang. 
+
+ 
+
+ 
+
+10 Two sample independent t-test 
+
+Typ av test: Two-sample independent t-test 
+Statistisk idé: Jämför medelvärdet mellan två oberoende grupper. 
+
+Scenario 
+
+Ett företag erbjuder två olika typer av digitala introduktionsprogram för nyanställda: 
+
+Program A: mer traditionell, föreläsningsbaserad introduktion. 
+
+Program B: interaktiv, uppgifts- och diskussionsbaserad introduktion. 
+
+Efter introduktionen får de nyanställda göra ett standardiserat kunskapstest (poängskala 0–100). HR-avdelningen vill undersöka om de två programmen ger olika genomsnittliga testresultat. 
+
+Målet är att ta reda på om det finns en statistiskt signifikant skillnad i testresultat mellan de som gått Program A och Program B. 
+
+Unikt dataset för varje grupp 
+
+Varje grupp ska skapa sitt eget unika dataset med hjälp av gruppnumret i Canvas. 
+
+Alla grupper måste följa samma kodmall och får endast ändra på själva gruppnumret. 
+
+Instruktion 
+
+Byt endast ut GRUPPNUMMER_HERE mot ert gruppnummer i Canvas (t.ex. 1, 2, 3, …, 30). Ändra inte några andra rader. 
+
+import numpy as np 
+
+ 
+
+# Sätt ert gruppnummer här (t.ex. 1, 2, 3, ...). 
+
+gruppnummer = GRUPPNUMMER_HERE 
+
+ 
+
+# Skapa en RNG med ert gruppnummer som seed 
+
+rng = np.random.default_rng(gruppnummer) 
+
+ 
+
+# Basvärden för testpoäng 
+
+# Program A: något lägre medelvärde, Program B: något högre 
+
+loc_A_bas = 72.0 
+
+loc_B_bas = 76.0 
+
+ 
+
+# Låt medelvärdena variera svagt med gruppnumret 
+
+# Variation ungefär ±2 poäng runt basvärdena 
+
+delta_A = (gruppnummer % 5 - 2) * 0.6   # -1.2 .. +1.2 
+
+delta_B = (gruppnummer % 7 - 3) * 0.5   # -1.5 .. +1.5 
+
+ 
+
+loc_A = loc_A_bas + delta_A 
+
+loc_B = loc_B_bas + delta_B 
+
+ 
+
+# Basstandardavvikelse för båda programmen 
+
+scale_A_bas = 8.0 
+
+scale_B_bas = 8.5 
+
+ 
+
+# Låt spridningen variera svagt med gruppnumret 
+
+scale_A = scale_A_bas + (gruppnummer % 3 - 1) * 0.5   # ~ 7.0 .. 9.0 
+
+scale_B = scale_B_bas + (gruppnummer % 4 - 1.5) * 0.4 # ~ 7.9 .. 9.1 
+
+ 
+
+# Säkerställ att scale aldrig blir för liten 
+
+scale_A = max(scale_A, 1.0) 
+
+scale_B = max(scale_B, 1.0) 
+
+ 
+
+print(f"Grupp {gruppnummer}:") 
+
+print(f"  Program A: loc = {loc_A:.2f}, scale = {scale_A:.2f}") 
+
+print(f"  Program B: loc = {loc_B:.2f}, scale = {scale_B:.2f}") 
+
+ 
+
+# Generera 25 testpoäng per program 
+
+program_A = rng.normal(loc=loc_A, scale=scale_A, size=25) 
+
+program_B = rng.normal(loc=loc_B, scale=scale_B, size=25) 
+
+ 
+
+# Avrunda till en decimal 
+
+program_A = np.round(program_A, 1) 
+
+program_B = np.round(program_B, 1) 
+
+ 
+
+# Klipp poäng till intervallet [0, 100] 
+
+program_A = np.clip(program_A, a_min=0.0, a_max=100.0) 
+
+program_B = np.clip(program_B, a_min=0.0, a_max=100.0) 
+
+ 
+
+print("Program A (testpoäng):") 
+
+print(program_A) 
+
+print("Program B (testpoäng):") 
+
+print(program_B) 
+
+ 
+
+ 
+
+ 
+
+Uppgifter 
+
+Formulera hypoteser 
+
+Skriv nollhypotesen H0 och mothypotesen Ha, där du testar om de två programmen ger samma genomsnittliga testresultat eller inte. 
+
+Generera data 
+
+Generera gruppens dataset enligt instruktionen ovan. 
+
+Förklara kort vad variablerna program_A och program_B representerar. 
+
+Datatyp och struktur 
+
+Ange datatypen (t.ex. numpy.ndarray) för program_A och program_B. 
+
+Beskriv kort vad varje element i respektive vektor betyder. 
+
+Utforska data 
+
+Presentera sammanfattande statistik för båda grupperna (medelvärde, median, standardavvikelse, min, max). 
+
+Visualisera data med minst två diagram (t.ex. histogram och boxplot, eller violinplot om ni vill). 
+
+Beskrivning av skillnader 
+
+Jämför gruppernas medelvärden och spridning med ord. 
+
+Kommentera om skillnaden “ser stor eller liten ut” innan ni gör själva testet. 
+
+Genomför t-testet 
+
+Utför ett two-sample independent t-test (tvåsidigt) vid signifikansnivå 5 procent. Använd scipy.stats.ttest_ind() 
+
+Redovisa nyckelvärden 
+
+t-värde 
+
+p-värde 
+
+Konfidensintervall (95 procent) för skillnaden mellan medelvärdena 
+
+Medelvärdet i program A och program B 
+
+Beslut om H0 
+
+Ange om H0 ska förkastas eller inte, baserat på p-värde och vald signifikansnivå. 
+
+Skriv tydligt “Vi förkastar H0” eller “Vi förkastar inte H0”. 
+
+Tolkning i kontext 
+
+Tolka resultatet i det praktiska sammanhanget: 
+
+Vad betyder det för HR-avdelningen? 
+
+Kan de säga att det ena programmet verkar bättre? 
+
+ 
+
+ 
+
+ 
+
+11 Two sample dependent t-test (Paired t-test) 
+
+ 
+
+Typ av test: Two sample dependent t-test (paired t-test) 
+Statistisk idé: Jämför två beroende mätningar från samma individer. 
+
+ 
+
+Scenario 
+
+Ett lag i bågskytte vill undersöka om en kort träningsintervention i form av mental träning förbättrar spelarnas träffsäkerhet. Varje spelare genomför ett standardiserat precisionstest före träningsperioden och samma test efter träningsperioden. Resultatet anges som poäng. 
+
+Målet är att undersöka om träningsinterventionen verkar ha påverkat spelarnas resultat. 
+
+ 
+
+Unikt dataset för varje grupp 
+
+Varje grupp ska skapa sitt eget unika dataset med hjälp av gruppnumret i Canvas. 
+
+Alla grupper måste följa samma kodmall och får endast ändra på själva gruppnumret, så att läraren kan återskapa varje dataset exakt. 
+
+ 
+
+Instruktion (datagenerering som alla ska följa exakt) 
+
+Byt endast ut GRUPPNUMMER_HERE mot ert gruppnummer i Canvas (t.ex. 1, 2, 3, …, 30). Ändra inte några andra rader. 
+
+ 
+
+import numpy as np 
+
+ 
+
+# Sätt ert gruppnummer här (t.ex. 1, 2, 3, ...). 
+
+gruppnummer = GRUPPNUMMER_HERE 
+
+ 
+
+# Skapa en RNG med ert gruppnummer som seed 
+
+rng = np.random.default_rng(gruppnummer) 
+
+ 
+
+# Antal spelare 
+
+n = 20 
+
+ 
+
+# Basnivå för resultat före träning 
+
+loc_fore_bas = 58.0 
+
+loc_fore = loc_fore_bas + (gruppnummer % 7 - 3) * 1.2 
+
+ 
+
+# Spridning före träning 
+
+scale_fore_bas = 6.5 
+
+scale_fore = scale_fore_bas + (gruppnummer % 5 - 2) * 0.4 
+
+scale_fore = max(scale_fore, 1.0) 
+
+ 
+
+# Förväntad förbättring efter träning 
+
+forbattring_bas = 4.0 
+
+forbattring_loc = forbattring_bas + (gruppnummer % 6 - 2.5) * 0.5 
+
+ 
+
+# Spridning i individuell förbättring 
+
+forbattring_scale_bas = 2.4 
+
+forbattring_scale = forbattring_scale_bas + (gruppnummer % 4 - 1.5) * 0.3 
+
+forbattring_scale = max(forbattring_scale, 0.5) 
+
+ 
+
+print(f"Grupp {gruppnummer}:") 
+
+print(f"  före: loc = {loc_fore:.2f}, scale = {scale_fore:.2f}") 
+
+print(f"  förbättring: loc = {forbattring_loc:.2f}, scale = {forbattring_scale:.2f}") 
+
+ 
+
+# Generera resultat före träning 
+
+fore = rng.normal(loc=loc_fore, scale=scale_fore, size=n) 
+
+fore = np.round(fore, 1) 
+
+fore = np.clip(fore, a_min=0.0, a_max=100.0) 
+
+ 
+
+# Generera individuell förbättring 
+
+forbattring = rng.normal(loc=forbattring_loc, scale=forbattring_scale, size=n) 
+
+forbattring = np.round(forbattring, 1) 
+
+ 
+
+# Beräkna resultat efter träning för samma spelare 
+
+efter = fore + forbattring 
+
+efter = np.round(efter, 1) 
+
+efter = np.clip(efter, a_min=0.0, a_max=100.0) 
+
+ 
+
+print("Före träning:") 
+
+print(fore) 
+
+print("Efter träning:") 
+
+print(efter) 
+
+ 
+
+ 
+
+Uppgifter 
+
+Beskriv behandlingen. 
+Beskriv vad behandlingen eller interventionen är i detta fall. 
+
+Formulera hypoteser. 
+Skriv nollhypotesen H0 och mothypotesen Ha för att undersöka om träningsinterventionen har påverkat resultaten. 
+
+Generera data. 
+Generera gruppens dataset enligt instruktionen ovan och förklara kort vad variablerna fore och efter representerar. 
+
+Datatyp och struktur. 
+Ange datatypen för fore och efter. Förklara varför observationerna är beroende. 
+
+Utforska data. 
+Presentera sammanfattande statistik för både före- och eftermätning, till exempel medelvärde, median, standardavvikelse, min och max. 
+
+Visualisera data. 
+Visa minst två lämpliga diagram. Minst ett diagram ska tydligt jämföra före och efter, till exempel boxplot, histogram eller linjediagram per spelare. 
+
+Genomför ett paired t-test. 
+Använd scipy.stats.ttest_rel(). Utför ett tvåsidigt paired t-test vid signifikansnivå 5 procent. 
+
+Redovisa nyckelvärden. 
+Redovisa t-värde, p-värde, medelvärde före, medelvärde efter samt 95 % konfidensintervall för medelskillnaden. 
+
+Beslut om H0. 
+Ange om H0 ska förkastas eller inte. Skriv tydligt ”Vi förkastar H0” eller ”Vi förkastar inte H0”. 
+
+Tolkning i kontext. 
+Tolka resultatet i relation till träningens möjliga effekt. Resonera också kort om skillnaden mellan statistisk signifikans och praktisk betydelse. 
